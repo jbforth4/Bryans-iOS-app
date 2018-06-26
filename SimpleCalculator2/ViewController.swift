@@ -56,18 +56,24 @@ class ViewController: UIViewController {
     }
     
     
-    
-    
     @IBAction func plusButton(_ sender: UIButton) {
         firstNumber = Double(display.text!)!
         display.text = "0"
     }
-    
+    @IBAction func minusButton(_ sender: UIButton) {
+        firstNumber = Double(display.text!)!
+        display.text = "0"
+    }
     @IBAction func equalsButton(_ sender: UIButton) {
         secondNumber = Double(display.text!)!
         
         display.text = String(firstNumber + secondNumber)
     }
+    
+    
+   
+    
+    
     
     @IBAction func clearButton(_ sender: UIButton) {
         display.text = "0"
