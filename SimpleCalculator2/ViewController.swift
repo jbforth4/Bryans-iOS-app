@@ -9,7 +9,38 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    var firstNumber: Double = 0.0
+    var secondNumber: Double = 0.0
+    
+    @IBOutlet weak var display: UILabel!
+    
+    @IBAction func oneButton(_ sender: UIButton) {
+        display.text = String(sender.tag - 1)
+     }
+    
+    @IBAction func twoButton(_ sender: UIButton) {
+        display.text = String(sender.tag - 1)
+    }
+    
+    @IBAction func plusButton(_ sender: UIButton) {
+        firstNumber = Double(display.text!)!
+        display.text = "0"
+    }
+    
+    @IBAction func equalsButton(_ sender: UIButton) {
+        secondNumber = Double(display.text!)!
+        
+        display.text = String(firstNumber + secondNumber)
+    }
+    
+    @IBAction func clearButton(_ sender: UIButton) {
+        display.text = "0"
+        firstNumber = 0
+        secondNumber = 0
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
