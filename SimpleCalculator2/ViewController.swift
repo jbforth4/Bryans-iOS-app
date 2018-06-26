@@ -16,7 +16,10 @@ class ViewController: UIViewController {
     var thirdNumber: Double = 0.0
     var fourthNumber: Double = 0.0
     var fifthNumber: Double = 0.0
-    var sixthNumber: Double = 0.0 
+    var sixthNumber: Double = 0.0
+    var seventhNumber: Double = 0.0
+    var eighthNumber: Double = 0.0
+    var ninthNumuber: Double = 0.0
     
     @IBOutlet weak var display: UILabel!
     
@@ -42,6 +45,18 @@ class ViewController: UIViewController {
     @IBAction func sixButton(_ sender: UIButton) {
         display.text = String(sender.tag - 1)
     }
+    @IBAction func SevenButton(_ sender: UIButton) {
+        display.text = String(sender.tag - 1)
+    }
+    @IBAction func eightButton(_ sender: UIButton) {
+        display.text = String(sender.tag - 1)
+    }
+    @IBAction func nineButton(_ sender: UIButton) {
+        display.text = String(sender.tag - 1)
+    }
+    
+    
+    
     
     @IBAction func plusButton(_ sender: UIButton) {
         firstNumber = Double(display.text!)!
@@ -51,7 +66,7 @@ class ViewController: UIViewController {
     @IBAction func equalsButton(_ sender: UIButton) {
         secondNumber = Double(display.text!)!
         
-        display.text = String(zeroNumber + firstNumber + secondNumber + thirdNumber + fourthNumber + fifthNumber)
+        display.text = String(firstNumber + secondNumber)
     }
     
     @IBAction func clearButton(_ sender: UIButton) {
@@ -62,7 +77,10 @@ class ViewController: UIViewController {
         thirdNumber = 0
         fourthNumber = 0
         fifthNumber = 0
-        
+        sixthNumber = 0
+        seventhNumber = 0
+        eighthNumber = 0
+        ninthNumuber = 0
     }
     
     
