@@ -13,16 +13,8 @@ class ViewController: UIViewController {
     var zeroNumber: Double = 0.0
     var firstNumber: Double = 0.0
     var secondNumber: Double = 0.0
-    var thirdNumber: Double = 0.0
-    var fourthNumber: Double = 0.0
-    var fifthNumber: Double = 0.0
-    var sixthNumber: Double = 0.0
-    var seventhNumber: Double = 0.0
-    var eighthNumber: Double = 0.0
-    var ninthNumuber: Double = 0.0
     
     @IBOutlet weak var display: UILabel!
-    
     
     @IBAction func zeroButton(_ sender: UIButton) {
         display.text = String(sender.tag - 1)
@@ -55,7 +47,6 @@ class ViewController: UIViewController {
         display.text = String(sender.tag - 1)
     }
     
-    
     @IBAction func plusButton(_ sender: UIButton) {
         firstNumber = Double(display.text!)!
         display.text = "0"
@@ -70,25 +61,12 @@ class ViewController: UIViewController {
         display.text = String(firstNumber + secondNumber)
     }
     
-    
-   
-    
-    
-    
     @IBAction func clearButton(_ sender: UIButton) {
         display.text = "0"
         zeroNumber = 0
         firstNumber = 0
         secondNumber = 0
-        thirdNumber = 0
-        fourthNumber = 0
-        fifthNumber = 0
-        sixthNumber = 0
-        seventhNumber = 0
-        eighthNumber = 0
-        ninthNumuber = 0
     }
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -99,7 +77,6 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
 
 }
 
