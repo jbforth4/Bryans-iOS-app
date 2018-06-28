@@ -65,10 +65,10 @@ class ViewController: UIViewController {
         display.text = "0"
     }
     @IBAction func divideButton(_ sender: UIButton) {
+        firstNumber = Double(display.text!)!
+        whatToDo = 4
+        display.text = "0"
     }
-    
-    
-    
     
     @IBAction func equalsButton(_ sender: UIButton) {
         secondNumber = Double(display.text!)!
