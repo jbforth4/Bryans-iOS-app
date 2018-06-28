@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     var zeroNumber: Double = 0.0
     var firstNumber: Double = 0.0
     var secondNumber: Double = 0.0
+    var whatToDo: Int = 0
     
     @IBOutlet weak var display: UILabel!
     
@@ -49,18 +50,41 @@ class ViewController: UIViewController {
     
     @IBAction func plusButton(_ sender: UIButton) {
         firstNumber = Double(display.text!)!
+        whatToDo = 1
         display.text = "0"
     }
     @IBAction func minusButton(_ sender: UIButton) {
         firstNumber = Double(display.text!)!
+        whatToDo = 2
         display.text = "0"
     }
-    @IBAction func equalsButton(_ sender: UIButton) {
-        secondNumber = Double(display.text!)!
-        
-        display.text = String(firstNumber + secondNumber)
+    
+    @IBAction func multiplyButton(_ sender: UIButton){
+        firstNumber = Double(display.text!)!
+        whatToDo = 3
+        display.text = "0"
+    }
+    @IBAction func divideButton(_ sender: UIButton) {
     }
     
+    
+    
+    
+    @IBAction func equalsButton(_ sender: UIButton) {
+        secondNumber = Double(display.text!)!
+        if (whatToDo == 1) {
+        display.text = String(firstNumber + secondNumber)
+        } else if (whatToDo == 2) {
+            display.text = String(firstNumber - secondNumber)
+        } else if (whatToDo == 3){
+            display.text = String(firstNumber * secondNumber)
+        } else if (whatToDo == 4){
+            display.text = String(firstNumber / secondNumber)
+
+        }
+            
+            
+        }
     @IBAction func clearButton(_ sender: UIButton) {
         display.text = "0"
         zeroNumber = 0
